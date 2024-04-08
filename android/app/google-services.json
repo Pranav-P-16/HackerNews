@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "965567493761",
+    "project_id": "swiggy-6de6a",
+    "storage_bucket": "swiggy-6de6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965567493761:android:7e7dca9fed0e9f295abf80",
+        "android_client_info": {
+          "package_name": "com.lonewolfinteractive.hackernews.hackernews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965567493761-dtdivrkoha46j18cuaobuo0a6q55d5n8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lonewolfinteractive.hackernews.hackernews",
+            "certificate_hash": "5b379e58dba8552abb5ad4a184a629f3e0875655"
+          }
+        },
+        {
+          "client_id": "965567493761-lvf7cd96er6jffgu35c4qhc2dik7hgkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCElMEpYO1m1J7If8b3KbhWc6hYAmbCH1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965567493761-lvf7cd96er6jffgu35c4qhc2dik7hgkr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "965567493761-39sdhblpmht8lhm69c5j3frd0rrl7tdl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pranav.swiggy.swiggy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965567493761:android:678826617f3438fd5abf80",
+        "android_client_info": {
+          "package_name": "com.pranav.swiggy.swiggy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965567493761-rjufci73kqqlcrt5ekcqlkggfh05em1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pranav.swiggy.swiggy",
+            "certificate_hash": "5b379e58dba8552abb5ad4a184a629f3e0875655"
+          }
+        },
+        {
+          "client_id": "965567493761-lvf7cd96er6jffgu35c4qhc2dik7hgkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCElMEpYO1m1J7If8b3KbhWc6hYAmbCH1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965567493761-lvf7cd96er6jffgu35c4qhc2dik7hgkr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "965567493761-39sdhblpmht8lhm69c5j3frd0rrl7tdl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pranav.swiggy.swiggy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
