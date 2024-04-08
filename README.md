@@ -14,7 +14,7 @@ Animated Opacity is used on LoginScreen and SplashScreen
 
 ## Screenshots
 # Splash Screen
-![splash_screen](https://github.com/Pranav-P-16/HackerNews/assets/91425738/c1a768f2-243f-4f91-b083-a4dd11a33317)
+![splash_screen](https://github.com/Pranav-P-16/HackerNews/assets/91425738/c1a768f2-243f-4f91-b083-a4dd11a33317 | width=50)
 # Login Screen
 ![loginpage](https://github.com/Pranav-P-16/HackerNews/assets/91425738/c1dc1eb0-79a8-4646-9333-3dd4bdc4a3b5)
 # Home Screen
