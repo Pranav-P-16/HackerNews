@@ -8,8 +8,8 @@ class Comment {
 
   factory Comment.fromJSON(Map<String,dynamic> json) {
     return Comment(
-        commentId: json["id"],
-        text: json["text"]
+        commentId: json["id"] ?? ' ',
+        text: json["text"] ?? ' '
     );
   }
 
@@ -25,8 +25,8 @@ class Story {
 
   factory Story.fromJSON(Map<String,dynamic> json) {
     return Story(
-        title: json["title"],
-        url: json["url"] ,
+        title: json["title"] ?? ' ',
+        url: json["url"] ?? ' ',
         commentIds: json["kids"] == null ? List<int>.empty() : json["kids"].cast<int>()
     );
   }
