@@ -54,6 +54,7 @@ dev_dependencies:
   url_launcher: ^6.2.3
   cloud_firestore: ^4.14.0
   http: ^1.2.0
+  flutter_webview_plugin: ^0.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

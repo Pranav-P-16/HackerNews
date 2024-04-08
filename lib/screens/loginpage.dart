@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+import 'package:hackernews/topArticleList.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -35,11 +36,11 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pop(context);
       if (user!=null) {
         if ((await APIs.userExists())){
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>  HomePage()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>  TopArticleList()));
         } else {
           await APIs.createUser().then((value) {
             Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (_)=> HomePage()));
+                MaterialPageRoute(builder: (_)=> TopArticleList()));
           });
         }
       }
