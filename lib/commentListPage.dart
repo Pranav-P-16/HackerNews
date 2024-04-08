@@ -13,31 +13,35 @@ class CommentListPage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-            title: Text(this.story.title),
-            backgroundColor: Colors.orange
+            title: Text(this.story.title,style: TextStyle(color: Colors.white),),
+            backgroundColor: Colors.orange,
+          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,),
+          onPressed: (){Navigator.pop(context);},),
 
         ),
-        body: ListView.builder(
-          itemCount: this.comments.length,
-          itemBuilder: (context,index) {
-            return Card(
-              child: ListTile(
-                  leading: Container(
-                      alignment: Alignment.center,
-                      width: 35,
-                      height: 35,
-                      decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.all(Radius.circular(10))
-                      ),
-                      child: Text("${1+index}",style: TextStyle(fontSize: 22,color: Colors.white))),
-                  title: Padding(
-                    padding: const EdgeInsets.only(top:8.0),
-                    child: Text(this.comments[index].text,style: TextStyle(fontSize: 18)),
-                  )
-              ),
-            );
-          },
+        body: Stack(
+          children: [Center(child: Image.asset('assets/images/icon.png')),ListView.builder(
+            itemCount: this.comments.length,
+            itemBuilder: (context,index) {
+              return Card(
+                child: ListTile(
+                    leading: Container(
+                        alignment: Alignment.center,
+                        width: 35,
+                        height: 35,
+                        decoration: BoxDecoration(
+                            color: Colors.purple,
+                            borderRadius: BorderRadius.all(Radius.circular(10))
+                        ),
+                        child: Text("${1+index}",style: TextStyle(fontSize: 22,color: Colors.white))),
+                    title: Padding(
+                      padding: const EdgeInsets.only(top:8.0),
+                      child: Text(this.comments[index].text,style: TextStyle(fontSize: 18)),
+                    )
+                ),
+              );
+            },
+          )],
         )
     );
 

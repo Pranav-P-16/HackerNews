@@ -1,9 +1,12 @@
-# hackernews
+# HackerNews
 
-A new Flutter project.
+A Light-weight Hackernews client for android and ios
 
 ## Getting Started
 
-#added login page <google firebase><google sign in>
-
-![image](https://github.com/Pranav-P-16/HackerNews/assets/91425738/5091644a-48eb-4fd9-ac18-ba209958b359)
+# Added login page <google firebase><google sign in>
+# Listview builder used after json parsing for showing data
+# Number of comments are also mentioned
+# Logout button is also provided.
+# Webview is enabled on clicking the story
+# All comments of specific post is shown on clicking comment view

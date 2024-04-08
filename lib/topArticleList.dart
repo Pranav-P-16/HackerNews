@@ -79,16 +79,22 @@ class _TopArticleListState extends State<TopArticleList> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text("HackerNews",style: TextStyle(
-              color: Colors.white,fontWeight: FontWeight.w500
-          ),),backgroundColor: Colors.orange,
+          title: Row(
+            children: [
+              Text("HackerNews",style: TextStyle(
+                  color: Colors.white,fontWeight: FontWeight.w500
+              ),),Text("☢",style: TextStyle(
+            fontWeight: FontWeight.w500))
+            ],
+          ),backgroundColor: Colors.orange,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right:40.0),
-            child: Icon(Icons.message,color: Colors.black,size: 30,),
+            child: Icon(Icons.message,color: Colors.white,size: 29,),
           )
         ],),
-        floatingActionButton: FloatingActionButton(child: Icon(Icons.exit_to_app,color: Colors.black,),
+        floatingActionButton: FloatingActionButton(child: Icon(Icons.exit_to_app,
+          color: Colors.black,),
     onPressed: () {
       _confirmBox_logOut();
     },backgroundColor: Colors.red,),
@@ -99,6 +105,9 @@ class _TopArticleListState extends State<TopArticleList> {
             itemCount: _stories.length,
             itemBuilder: (_, index) {
               return Card(
+                shape:RoundedRectangleBorder(
+                    side: new BorderSide(color: Colors.deepOrange, width: 1.0),
+                    borderRadius: BorderRadius.circular(16)),
                 child: ListTile(
                   title: InkWell(
                       onTap: (){
@@ -151,7 +160,8 @@ class _TopArticleListState extends State<TopArticleList> {
           await APIs.auth.signOut().then((value) async {
             await GoogleSignIn().signOut().then((value) {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginPage()));
+              Navigator.pop(context);
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> LoginPage()));
             });
 
           });
