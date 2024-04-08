@@ -19,9 +19,10 @@ class _MainScreenState extends State<MainScreen> {
     return MaterialApp(
       routes: {
         "/": (_) => WebviewScaffold(
+          scrollBar: true,
           appBar: AppBar(title:Text(widget.story.title,style: TextStyle(color: Colors.white),
           ),backgroundColor: Colors.orange,leading: IconButton(
-            icon: Icon(Icons.arrow_back_outlined),
+            icon: Icon(Icons.arrow_back_outlined,color: Colors.white,),
             onPressed: (){Navigator.pop(context);},
           )),
           url: widget.story.url,

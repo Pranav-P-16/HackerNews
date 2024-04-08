@@ -26,7 +26,7 @@ class Story {
   factory Story.fromJSON(Map<String,dynamic> json) {
     return Story(
         title: json["title"],
-        url: json["url"],
+        url: json["url"] ,
         commentIds: json["kids"] == null ? List<int>.empty() : json["kids"].cast<int>()
     );
   }

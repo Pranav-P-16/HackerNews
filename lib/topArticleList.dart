@@ -2,10 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:hackernews/screens/loginpage.dart';
 import 'package:hackernews/screens/storypage.dart';
 import 'package:hackernews/story.dart';
 import 'package:hackernews/webservice.dart';
-
+import 'package:google_sign_in/google_sign_in.dart';
+import 'api/apis.dart';
 import 'commentListPage.dart';
 
 class TopArticleList extends StatefulWidget {
@@ -61,31 +63,48 @@ class _TopArticleListState extends State<TopArticleList> {
         appBar: AppBar(
           title: Text("HackerNews",style: TextStyle(
               color: Colors.white,fontWeight: FontWeight.w500
-          ),),backgroundColor: Colors.orange,),
+          ),),backgroundColor: Colors.orange,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right:40.0),
+            child: Icon(Icons.message,color: Colors.white,size: 30,),
+          )
+        ],),
         floatingActionButton: FloatingActionButton(child: Icon(Icons.exit_to_app,color: Colors.black,),
-    onPressed: (){},backgroundColor: Colors.red,),
+    onPressed: () async {
+    await APIs.auth.signOut().then((value) async {
+    await GoogleSignIn().signOut().then((value) {
+      Navigator.pop(context);
+      Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginPage()));
+    });
+    });
+    },backgroundColor: Colors.red,),
 
         body: ListView.builder(
           physics: BouncingScrollPhysics(),
           itemCount: _stories.length,
           itemBuilder: (_, index) {
-            return ListTile(
-              onTap: () {
-                _navigateToShowCommentsPage(context, index);
-              },
-              title: Text(_stories[index].title, style: TextStyle(fontSize: 20)),
-              trailing: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.orange,
-                      borderRadius: BorderRadius.all(Radius.circular(30))
+            return Card(
+              child: InkWell(
+                onTap: (){
+                  _navigateToShowCommentsPage(context, index);
+                },
+                child: ListTile(
+                  title: Text(_stories[index].title, style: TextStyle(fontSize: 18)),
+                  trailing: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
+                      alignment: Alignment.center,
+                      width: 50,
+                      height: 50,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                          child: Text("${_stories[index].commentIds.length}",style: TextStyle(fontSize:15,color: Colors.white)),
+                      )
                   ),
-                  alignment: Alignment.center,
-                  width: 50,
-                  height: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                      child: Text("${_stories[index].commentIds.length}",style: TextStyle(fontSize:15,color: Colors.white)),
-                  )
+                ),
               ),
             );
           },
