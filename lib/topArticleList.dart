@@ -73,18 +73,18 @@ class _TopArticleListState extends State<TopArticleList> {
               onTap: () {
                 _navigateToShowCommentsPage(context, index);
               },
-              title: Text(_stories[index].title, style: TextStyle(fontSize: 18)),
+              title: Text(_stories[index].title, style: TextStyle(fontSize: 20)),
               trailing: Container(
                   decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.all(Radius.circular(16))
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.all(Radius.circular(30))
                   ),
                   alignment: Alignment.center,
                   width: 50,
                   height: 50,
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Text("${_stories[index].commentIds.length}",style: TextStyle(color: Colors.white)),
+                      child: Text("${_stories[index].commentIds.length}",style: TextStyle(fontSize:15,color: Colors.white)),
                   )
               ),
             );
