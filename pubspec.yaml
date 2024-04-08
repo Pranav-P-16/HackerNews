@@ -53,6 +53,7 @@ dev_dependencies:
   google_sign_in: ^6.2.1
   url_launcher: ^6.2.3
   cloud_firestore: ^4.14.0
+  http: ^1.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

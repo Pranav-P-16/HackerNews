@@ -92,10 +92,10 @@ class _LoginPageState extends State<LoginPage> {
                               text:'Welcome to HackerNews...',
                               style: TextStyle(fontSize:30, fontFamily: "RaleWay",fontWeight: FontWeight.w600)),
                           TextSpan(
-                              text:'\n'+'\t'*10+'Swiggy your way',
+                              text:'\n'+'\t'*9+'Tech news and',
                               style: TextStyle(fontWeight: FontWeight.w300,color: Colors.orange)),
                           TextSpan(
-                              text:'\n'+'\t'*19+'to deliciousness...',
+                              text:'\n'+'\t'*17+'discussions platform...',
                               style: TextStyle(fontWeight: FontWeight.w300,color: Colors.orange))])),
               )),
           AnimatedPositioned(
