@@ -132,7 +132,7 @@ class _TopArticleListState extends State<TopArticleList> {
                         )
                     ),
                   ),
-                ),
+                ), 
               );
             },
           )],
